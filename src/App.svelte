@@ -65,7 +65,7 @@
   h1 { font: inherit; font-size: 13px; line-height: 1.7; font-weight: 400; margin: 0 0 20px; color: #64645d; }
   .install { display: flex; align-items: center; gap: 16px; border: 1px solid #cfcec8; padding: 8px 8px 8px 16px; }
   code { flex: 1; min-width: 0; font: inherit; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; user-select: all; }
-  button { font: inherit; font-size: 13px; display: grid; place-items: center; width: 44px; min-width: 44px; flex: 0 0 44px; min-height: 44px; border: 1px solid #252522; background: #252522; color: #faf9f6; cursor: pointer; padding: 0; transition: transform 120ms ease-out; }
+  button { font: inherit; font-size: 13px; display: grid; place-items: center; width: 44px; min-width: 44px; flex: 0 0 44px; min-height: 44px; border: 1px solid #252522; background: #060606; color: #ffffff; cursor: pointer; padding: 0; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 160ms cubic-bezier(0.4, 0, 0.6, 1); }
   .icons { position: relative; display: block; width: 18px; height: 18px; }
   .icons svg { display: block; transform: scale(1); opacity: 1; }
   .animate .icons svg { transition: transform 240ms cubic-bezier(0.25, 0.1, 0, 1), opacity 240ms cubic-bezier(0.25, 0.1, 0, 1); }
@@ -73,11 +73,15 @@
   .icons .check-icon, .copied .copy-icon { transform: scale(0.3); opacity: 0; }
   .copied .check-icon { transform: scale(1); opacity: 1; }
   @media (prefers-reduced-motion: reduce) { .animate .icons svg { transition: none; } }
-  button.pressed { transform: scale(0.97); }
-  @media (hover: hover) and (pointer: fine) { button:hover { background: #44443e; } }
+  button.pressed { transform: scale(0.98); background: #181818; transition-duration: 90ms; }
+  @media (hover: hover) and (pointer: fine) { button:hover { background: #181818; } }
   @media (prefers-reduced-motion: reduce) { button { transition: none; } button.pressed { transform: none; } }
   button:disabled { cursor: wait; }
-  button:focus-visible, a:focus-visible { outline: 2px solid #252522; outline-offset: 4px; }
+  button:focus-visible, a:focus-visible { outline: none; }
+  button:focus-visible:active:not(.pressed) { background: #181818; transition: none; }
+  button:focus-visible .icons::after { content: ''; position: absolute; left: 0; right: 0; bottom: -5px; height: 2px; background: currentColor; }
+  a:focus-visible { color: #060606; text-decoration-color: #060606; text-decoration-thickness: 2px; }
+  @media (forced-colors: active) { button:focus-visible { border-color: Highlight; } button:focus-visible .icons::after { background: Highlight; } a:focus-visible { color: LinkText; text-decoration-color: Highlight; } }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   .status { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: #64645d; }
   .note { margin: 12px 0 0; color: #64645d; font-size: 13px; line-height: 1.7; }
