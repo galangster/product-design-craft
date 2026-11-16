@@ -1,0 +1,2 @@
+# Acceptance
+One copyable npx skills add command. Clear instruction that it can be pasted in a terminal or given to an agent. Node prerequisite visible. Native copy button shows success only after clipboard succeeds, with a manual-selection recovery when denied. Keyboard access, readable skill and recipes, responsive 320px layout, 200% text sizing and reduced motion. Never imply an unpublished install target works. Public release requires verified personal owner, clean content, tested install and review.

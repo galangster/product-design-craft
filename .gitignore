@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vercel/
+proof/
+.env*
+.DS_Store
+.oxlintrc.local.json
+HANDOFF.md
+
+.local-tools/
