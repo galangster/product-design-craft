@@ -12,6 +12,6 @@ Requires Node.js 22.20+. Choose your agent in the installer. Installs in the cur
 
 `npm install`, then `npm run dev`. Run `npm run check`, `npm run lint`, and `npm run build` before release.
 
-This is original synthesized guidance, not an official or endorsed Kole Jain or Emil Kowalski product. The source notes distinguish partial transcript research from direct visual inspection. No raw transcripts are distributed.
+This is original synthesized guidance, not an official or endorsed third-party product. The source notes distinguish partial transcript research from direct visual inspection. No raw transcripts are distributed.
 
 The site installs this public repository through the official skills CLI. No separate npm package is published.

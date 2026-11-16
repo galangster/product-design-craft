@@ -1,6 +1,6 @@
 # Verification checklist
 
-Use actual execution where possible and label the evidence source. Record N/A with a reason, not a silent omission.
+Use actual execution where possible and label the evidence source. Record each applicable state/check as tested, failed, blocked or N/A with a reason. A static fixture may make loading N/A but cannot silently omit it.
 
 1. **Task:** run the primary journey with representative data; verify completion and recovery. For prototypes, say that effects are simulated.
 2. **Content:** long and short names, zero/negative/large numbers, missing values, many rows, localization expansion, and a realistic empty state.
@@ -14,3 +14,7 @@ Use actual execution where possible and label the evidence source. Record N/A wi
 10. **Regression:** compare the same data/state/viewport to baseline; confirm improvements do not remove necessary information or actions. For production-bound work preserve project test, security, independent review and release gates.
 
 Evidence record: artifact revision; environment; viewport/state; action performed; observed outcome; pass/fail/blocked; unresolved risk. Separate visual review, interaction checks, automated checks and human validation. Never turn a checklist into a claim of complete accessibility certification.
+
+## Data and state contracts
+
+For a changed or simulated state, define its lifetime: what survives closing/reopening a dialog, navigating back and reloading? Test the intended contract; distinguish session-only fixture behavior from real persistence. For displayed aggregates, specify included rows, credits/negatives, currency, time range and net/gross meaning. Check arithmetic against the fixture and validate uncertain domain rules with authoritative context; a clear label alone is not business correctness. Keep claimed viewport, zoom and data volume identical to actual test setup. Five rows do not validate large-list behavior.
