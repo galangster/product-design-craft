@@ -14,4 +14,4 @@ Requires Node.js 22.20+. Choose your agent in the installer. Installs in the cur
 
 This is original synthesized guidance, not an official or endorsed Kole Jain or Emil Kowalski product. The source notes distinguish partial transcript research from direct visual inspection. No raw transcripts are distributed.
 
-Release setup: set `VITE_SKILL_REPOSITORY` to the verified public `owner/repository`. The verified default is galangster/product-design-craft. No npm package is published.
+The site installs this public repository through the official skills CLI. No separate npm package is published.
